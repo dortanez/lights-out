@@ -33,9 +33,15 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
   function createBoard() {
     let initialBoard = [];
-    // TODO: create array-of-arrays of true/false values
+    for(let i = 0; i < nrows; i++) {
+      initialBoard.push([...Array(ncols)].map(i => {
+        const random = Math.random();
+        return random > chanceLightStartsOn ? false : true;
+      }))
+    }
     return initialBoard;
   }
+  console.log(createBoard())
 
   function hasWon() {
     // TODO: check the board in state to determine whether the player has won.
@@ -66,8 +72,23 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   // TODO
 
   // make table board
+  const HTMLBoard = [];
+  for(let i = 0; i < ncols; i++) {
+    const row = [];
+    for(let j = 0; j < nrows; j++) {
+      row.push(<Cell isLit={board[i][j]}/>)
+    }
+    HTMLBoard.push(row);
+  }
+  console.log(HTMLBoard)
 
-  // TODO
+  return (
+    <table>
+      <tbody>
+
+      </tbody>
+    </table>
+  )
 }
 
 export default Board;
