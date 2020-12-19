@@ -2,3 +2,10 @@
   margin: 0 auto;
   border: 1px solid black;
 }
+
+.Board-win {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}

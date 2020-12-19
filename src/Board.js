@@ -44,7 +44,6 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
 
   function hasWon() {
     // TODO: check the board in state to determine whether the player has won.
-    console.log(board)
     return board.every(i => i.every(j => !j))
     
   }
@@ -78,7 +77,7 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
 
   // if the game is won, just show a winning msg & render nothing else
       if(hasWon()) {
-        return <div>You Win!</div>
+        return <div className='Board-win'>You Win!</div>
       }
 
 
