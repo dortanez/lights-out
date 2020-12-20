@@ -1,16 +1,10 @@
-import { render, screen } from '@testing-library/react';
+import {render} from '@testing-library/react';
 import App from './App';
-import Board from './Board';
-import Cell from './Cell';
+import React from 'react';
 
-test('it renders without crashing', ( => {
+test('it renders without crashing', () => {
     render(<App/>)
-}))
+})
 
-test('it renders without crashing', ( => {
-    render(<Board/>)
-}))
 
-test('it renders without crashing', ( => {
-    render(<Cell/>)
-}))
+
