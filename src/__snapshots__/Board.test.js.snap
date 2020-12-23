@@ -2,10 +2,44 @@
 
 exports[`it should match snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="Board-win"
+  <table
+    class="Board"
   >
-    You Win!
-  </div>
+    <tbody>
+      <tr>
+        <td
+          class="Cell "
+        />
+        <td
+          class="Cell "
+        />
+        <td
+          class="Cell Cell-lit"
+        />
+      </tr>
+      <tr>
+        <td
+          class="Cell Cell-lit"
+        />
+        <td
+          class="Cell Cell-lit"
+        />
+        <td
+          class="Cell "
+        />
+      </tr>
+      <tr>
+        <td
+          class="Cell "
+        />
+        <td
+          class="Cell "
+        />
+        <td
+          class="Cell "
+        />
+      </tr>
+    </tbody>
+  </table>
 </DocumentFragment>
 `;

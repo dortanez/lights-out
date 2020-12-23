@@ -7,6 +7,6 @@ test('it renders without crashing', () => {
 })
 
 test('it should match snapshot',() => {
-    const {asFragment} = render(<Board />);
+    const {asFragment} = render(<Board nrows={3} ncols={3} chanceLightStartsOn={.50}/>);
     expect(asFragment()).toMatchSnapshot();
 })
